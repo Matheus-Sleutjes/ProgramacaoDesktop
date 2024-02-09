@@ -41,12 +41,12 @@ public class Main {
 				break;
 				
 			case 3: 
-				Entrada(estoque);
+				estoque = Entrada(estoque);
 				
 				break;
 						
 			case 4: 
-				Saida();
+				estoque = Saida(estoque);
 				
 				break;
 		}
@@ -74,18 +74,45 @@ public class Main {
 		});
 	}
 
-	public static void Entrada(List<Produto> estoque){
+	public static List<Produto> Entrada(List<Produto> estoque){
 		Scanner ler = new Scanner(System.in);
 		
 		System.out.println("Digite o codigo do produto que quer dar entrada.");
 		int codigo = ler.nextInt();
+
+		System.out.println("Digite quantidade do produto para entrada.");
+    	int quantidade = ler.nextInt();	
 		
-		Optional<Produto> produtoAchado = estoque.stream()
-			.filter(produto -> produto.getCodigo() == codigo)
-			.findFirst();
+		estoque.stream()
+      		.filter(produto -> produto.getCodigo() == codigo)
+      		.findFirst()
+      		.ifPresent(produto -> {produto.setQuantidade(quantidade);});
+		
+		System.out.println("Entrada realizada com sucesso!");
+		return estoque;
 	}
 
-	public static void Saida(){
-		System.out.println("Saida");
+	public static List<Produto> Saida(List<Produto> estoque){
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("Digite o codigo do produto que quer dar saida.");
+		int codigo = ler.nextInt();
+
+		System.out.println("Digite quantidade do produto para saida.");
+    	int quantidade = ler.nextInt();	
+		
+		estoque.stream()
+      		.filter(produto -> produto.getCodigo() == codigo)
+      		.findFirst()
+      		.ifPresent(produto -> {
+				if(produto.getQuantidade() < quantidade){
+					System.out.println("Não tem estoque suficiente para dar saida nesta quantidade!");
+				}else{
+					int quantidadeAtual = produto.getQuantidade() - quantidade;
+					produto.setQuantidade(quantidadeAtual);
+					System.out.println("Saída realizada com sucesso!");
+				}
+			});
+		return estoque;
 	}
 }
