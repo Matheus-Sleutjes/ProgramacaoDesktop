@@ -43,4 +43,27 @@ public abstract class NaveEspacial {
     public double getCombustivel() {
         return this.Combustivel;
     }
+
+    public void acelerar(double acelerar){
+        this.VelocidadeMaxima += acelerar;
+    }
+
+    public void desacelerar(double acelerar){
+        this.VelocidadeMaxima -= acelerar;
+    }
+
+    public void abastecer(double litros){
+        this.Combustivel += litros;
+    }
+
+    public void viajar(double distancia){
+        this.Combustivel -= distancia;
+    }
+
+    public String ToString(){
+        return "Nome: "+this.Nome+","+
+                "Velociade: "+Double.toString(this.VelocidadeMaxima)+","+
+                "Numero Tripulantes: "+Integer.toString(this.NumeroTripulantes)+","+
+                "Combustivel: "+Double.toString(this.Combustivel)+",";
+    }
 }
