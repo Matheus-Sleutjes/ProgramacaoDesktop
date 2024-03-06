@@ -18,9 +18,13 @@ public class NaveCarga extends NaveEspacial {
         return this.CapacidadeCarga;
     }
 
-    @Override
-    public String ToString(){
-        return super.ToString()+
-                "Capacidade de Carga: "+Double.toString(this.CapacidadeCarga);
-    }
+    // @Override
+    // public String ToString(){
+    //     return "Nome: "+this.getNome()
+    //             // "Velociade: "+this.getVelocidadeMaxima()","+
+    //             // "Numero Tripulantes: "+this.getNumeroTripulantes()+","+
+    //             // "Combustivel: "+this.getCombustivel()+","+
+    //             // "Capacidade de Carga: "+this.getCapacidadeCarga()
+    //             ;
+    // }
 }

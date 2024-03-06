@@ -14,9 +14,12 @@ public class NavePassageiros extends NaveEspacial {
         return this.NumeroPassageiros;
     }
 
-    @Override
-    public String ToString(){
-        return super.ToString()+
-                "Numero de passageiros: "+Integer.toString(this.NumeroPassageiros);
-    }
+    // @Override
+    // public String ToString(){
+    //     return  "Nome: "+this.Nome+","+
+    //             "Velociade: "+Double.toString(this.VelocidadeMaxima)+","+
+    //             "Numero Tripulantes: "+Integer.toString(this.NumeroTripulantes)+","+
+    //             "Combustivel: "+Double.toString(this.Combustivel)+","+
+    //             "Numero de passageiros: "+Integer.toString(this.NumeroPassageiros);
+    // }
 }

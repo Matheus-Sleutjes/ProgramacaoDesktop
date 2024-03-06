@@ -32,7 +32,7 @@ public abstract class NaveEspacial {
         this.NumeroTripulantes = novaTripulacao;
     }
 
-    public int getTripulacao(){
+    public int getTripulantes(){
         return this.NumeroTripulantes;
     }
 
@@ -45,11 +45,17 @@ public abstract class NaveEspacial {
     }
 
     public void acelerar(double acelerar){
+        if(acelerar < 0)
+        System.out.println("Não é possivel acelerar negativo");
+        else
         this.VelocidadeMaxima += acelerar;
     }
 
-    public void desacelerar(double acelerar){
-        this.VelocidadeMaxima -= acelerar;
+    public void desacelerar(double desacelerar){
+        if(this.VelocidadeMaxima < desacelerar)
+        System.out.println("Não foi possivel desacelerar essa velociada");
+        else
+        this.VelocidadeMaxima -= desacelerar;
     }
 
     public void abastecer(double litros){
@@ -57,13 +63,17 @@ public abstract class NaveEspacial {
     }
 
     public void viajar(double distancia){
+        if(this.Combustivel < distancia)
+        System.out.println("Não tem combustivel suficiente para viagem");
+        else
         this.Combustivel -= distancia;
     }
 
     public String ToString(){
-        return "Nome: "+this.Nome+","+
-                "Velociade: "+Double.toString(this.VelocidadeMaxima)+","+
-                "Numero Tripulantes: "+Integer.toString(this.NumeroTripulantes)+","+
-                "Combustivel: "+Double.toString(this.Combustivel)+",";
+        // return "Nome: "+this.Nome+","+
+        //         "Velociade: "+Double.toString(this.VelocidadeMaxima)+","+
+        //         "Numero Tripulantes: "+Integer.toString(this.NumeroTripulantes)+","+
+        //         "Combustivel: "+Double.toString(this.Combustivel)+",";
+        return "objeto";
     }
 }

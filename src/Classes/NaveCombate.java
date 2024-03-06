@@ -18,9 +18,12 @@ public class NaveCombate extends NaveEspacial {
         return "Atacando!";
     }
 
-    @Override
-    public String ToString(){
-        return super.ToString()+
-                "Armamento: "+this.Armamento;
-    }
+    // @Override
+    // public String ToString(){
+    //     return "Nome: "+this.Nome+","+
+    //             "Velociade: "+Double.toString(this.VelocidadeMaxima)+","+
+    //             "Numero Tripulantes: "+Integer.toString(this.NumeroTripulantes)+","+
+    //             "Combustivel: "+Double.toString(this.Combustivel)+","+
+    //             "Armamento: "+this.Armamento;
+    // }
 }
