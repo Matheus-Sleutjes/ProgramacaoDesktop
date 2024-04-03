@@ -4,15 +4,15 @@ public class AbstractFactory {
     VeiculoFactory veiculoFactory;
     if (tipoVeiculo.equalsIgnoreCase("carro"))
     {
-        veiculoFactory = new BlackFactory(); 
+        veiculoFactory = new FabricaCarro(); 
     }
     else if (tipoVeiculo.equalsIgnoreCase("moto")) 
     {
-        veiculoFactory = new WhiteFactory();
+        veiculoFactory = new FabricaMoto();
     } 
     else if (tipoVeiculo.equalsIgnoreCase("caminhao"))
     {
-      veiculoFactory = new WhiteFactory();
+      veiculoFactory = new FabricaCaminhao();
     }
     return veiculoFactory;
   }
