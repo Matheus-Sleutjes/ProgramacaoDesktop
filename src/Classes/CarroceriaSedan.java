@@ -1,4 +1,4 @@
-public class CarroceriaSedan implements ICarroceria
+public class CarroceriaSedan extends Carroceria implements ICarroceria
 {
     
 }

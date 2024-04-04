@@ -1,4 +1,4 @@
-public class SistemaEletricoBasico implements ISistemaEletrico
+public class SistemaEletricoBasico extends SistemaEletrico implements ISistemaEletrico
 {
     
 }

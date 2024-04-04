@@ -1,4 +1,4 @@
-public class AssentoTecido implements IAssento
+public class AssentoTecido extends Assento implements IAssento
 {
     
 }

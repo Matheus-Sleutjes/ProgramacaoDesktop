@@ -1,4 +1,4 @@
-public class MotorEletrico implements IMotor
+public class MotorEletrico extends Motor implements IMotor
 {
     
 }

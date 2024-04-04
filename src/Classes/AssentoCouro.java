@@ -1,4 +1,4 @@
-public class AssentoCouro implements IAssento
+public class AssentoCouro extends Assento implements IAssento
 {
     
 }

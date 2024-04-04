@@ -1,4 +1,4 @@
-public class CarroceriaSUV implements ICarroceria
+public class CarroceriaSUV extends Carroceria implements ICarroceria
 {
     
 }

@@ -1,4 +1,4 @@
-public class MotorCombustao implements IMotor
+public class MotorCombustao extends Motor implements IMotor
 {
     
 }

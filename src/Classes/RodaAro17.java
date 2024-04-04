@@ -1,4 +1,4 @@
-public class RodaAro17 implements IRoda
+public class RodaAro17 extends Roda implements IRoda
 {
     
 }
